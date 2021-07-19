@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "main": "src/server.js",
   "license": "MIT",
+	"scripts": {
+		"start": "node src/server.js"
+	},
   "dependencies": {
     "apollo-server": "^3.0.1",
     "graphql": "^15.5.1"
