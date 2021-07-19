@@ -1,0 +1,10 @@
+{
+  "name": "minhamudanca-server",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^3.0.1",
+    "graphql": "^15.5.1"
+  }
+}
