@@ -1,9 +1,9 @@
 const { ApolloServer } = require('apollo-server');
-const typeDefs = require('./schemas/schema.gql');
+const userSchema = require('./schemas/user.gql');
 const resolvers = require('./resolvers');
 
 const server = new ApolloServer({
-	typeDefs,
+	typeDefs: [userSchema],
 	resolvers
 });
 
