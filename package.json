@@ -4,11 +4,12 @@
   "main": "src/server.js",
   "license": "MIT",
   "scripts": {
-    "start": "node src/server.js",
-    "nodemon-TBD": "nodemon src/server.js"
+    "start": "nodemon -e js,json,gql src/server.js"
   },
   "dependencies": {
     "apollo-server": "^3.0.1",
-    "graphql": "^15.5.1"
+    "graphql": "^15.5.1",
+    "graphql-tools": "^7.0.5",
+    "nodemon": "^2.0.12"
   }
 }
