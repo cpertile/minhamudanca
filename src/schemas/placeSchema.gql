@@ -1,0 +1,21 @@
+const { gql } = require('apollo-server');
+
+const placeSchema = gql`
+	type Place {
+		id: ID!,
+		url: String,
+		rent: Float,
+		condo: Float,
+		notes: String
+	}
+
+	type Query {
+		places: [Place!]!
+	}
+
+	type Mutation {
+		addPlace(url: String, rent: Float, condo: Float, notes: String): Place
+	}
+`
+
+module.exports = placeSchema;

@@ -3,13 +3,13 @@ const users = [
 	{ id: 2, name: 'krebinho', email: 'kre@bi.nho' },
 ]
 
-module.exports = {
-	Query: {
-		users: () => users,
-		user: () => { }
-	},
-
-	Mutation: {
-		addUser: () => { }
-	}
+const Query = {
+	users: () => users,
+	user: () => { }
 }
+
+const Mutation = {
+	addUser: () => { }
+}
+
+module.exports = { Query, Mutation };

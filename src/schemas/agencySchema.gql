@@ -1,0 +1,19 @@
+const { gql } = require('apollo-server');
+
+const agencySchema = gql`
+	type Agency {
+		id: ID!,
+		name: String!,
+		url: String!
+	}
+
+	type Query {
+		agencies: [Agency!]!
+	}
+
+	type Mutation {
+		addAgency(name: String!, url: String): Agency
+	}
+`
+
+module.exports = agencySchema;
