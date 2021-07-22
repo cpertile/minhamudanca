@@ -1,3 +1,4 @@
+require('dotenv').config()
 const { ApolloServer } = require('apollo-server')
 const { mergeTypeDefs } = require('graphql-tools')
 const userSchema = require('./schemas/userSchema.gql')
