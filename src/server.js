@@ -1,10 +1,10 @@
 const { ApolloServer } = require('apollo-server');
 const userSchema = require('./schemas/user.gql');
-const resolvers = require('./resolvers');
+const userResolvers = require('./resolvers/userResolver');
 
 const server = new ApolloServer({
 	typeDefs: [userSchema],
-	resolvers
+	resolvers: [userResolvers]
 });
 
 server.listen().then(({ url }) => {
