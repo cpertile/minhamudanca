@@ -13,7 +13,7 @@ const server = new ApolloServer({
 	resolvers: [userResolvers, placeResolvers, agencyResolvers]
 })
 
-const port = process.env.port || 8080;
+const port = process.env.port || 4000;
 server.listen(port).then(() => {
 	console.log(`=> Server listening at ${port}`);
 })
