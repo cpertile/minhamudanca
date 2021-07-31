@@ -1,16 +1,12 @@
 require('dotenv').config()
 const { ApolloServer } = require('apollo-server')
 const { mergeTypeDefs } = require('graphql-tools')
-const userSchema = require('./schemas/userSchema.gql')
-const placeSchema = require('./schemas/placeSchema.gql')
-const agencySchema = require('./schemas/agencySchema.gql')
-const userResolvers = require('./resolvers/userResolver')
-const placeResolvers = require('./resolvers/placeResolver')
-const agencyResolvers = require('./resolvers/agencyResolver')
+const { userSchema, placeSchema, agencySchema } = require('./schemas')
+const { userResolver, placeResolver, agencyResolver } = require('./resolvers')
 
 const server = new ApolloServer({
 	typeDefs: mergeTypeDefs([userSchema, placeSchema, agencySchema]),
-	resolvers: [userResolvers, placeResolvers, agencyResolvers]
+	resolvers: [userResolver, placeResolver, agencyResolver]
 })
 
 const port = process.env.port || 4000;
